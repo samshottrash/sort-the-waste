@@ -1,0 +1,8 @@
+.box { 
+    width: 700px; 
+    height: 220px; 
+    border: 2px solid black; 
+    background-repeat: no-repeat; 
+    background-image: url( 
+"https://www.geeksforgeeks.org/wp-content/uploads/javascript-768x256.png"); 
+} 
