@@ -1,8 +1,19 @@
-.box { 
-    width: 700px; 
-    height: 220px; 
-    border: 2px solid black; 
+body { 
+    height: 100%;
+    background-size: contain;
     background-repeat: no-repeat; 
-    background-image: url( 
-"https://www.geeksforgeeks.org/wp-content/uploads/javascript-768x256.png"); 
-} 
+    background-position: center center;
+    background-image: url("Desktop - 2.png");
+    overflow: scroll;
+}
+
+html {
+    height: 100%;
+    background-size: contain;
+    background-repeat: no-repeat; 
+    background-position: center center;
+}
+
+/* #butt1 {
+    background-color: ;
+} */
