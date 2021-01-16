@@ -1,0 +1,91 @@
+.example-parent {
+  border: 2px solid #DFA612;
+  color: black;
+  display: flex;
+  font-family: sans-serif;
+  font-weight: bold;
+}
+
+.example-origin {
+  flex-basis: 100%;
+  flex-grow: 1;
+  padding: 10px;
+  max-width: 50%;
+}
+
+.example-draggable {
+  background-color: #4AAE9B;
+  font-weight: normal;
+}
+
+.example-dropzone {
+  background-color: #6DB65B;
+  max-height: 800px
+  max-width: 800px;
+  border: 3px dotted #ccc;
+  
+}
+
+.dragme {
+  position: absolute;
+  left: 0;
+  top: 0;
+  /* set these so Chrome doesn't return 'auto' from getComputedStyle */
+  width: 200px;
+  background: rgba(255, 255, 255, 1);
+  border: 2px solid rgba(0, 0, 0, 1);
+  border-radius: 4px;
+  padding: 8px;
+}
+
+.second {
+  left: 0px;
+  top: 120px;
+}
+
+.third {
+  left: 50px;
+  top: 120px;
+}
+
+.fourth{
+  left: 0px;
+  top: 200px;
+}
+
+.fifth {
+  left: 50px;
+  top: 0px;
+}
+
+body {
+  min-height: 2000px;
+  border:2px solid #4AAE9B;
+}
+
+.bin {
+}
+
+.compost {
+  position: absolute;
+  left: 1000px;
+  top: 500px;
+}
+
+.garbage {
+  position: absolute;
+  left: 1000px;
+  top: 1000px;
+}
+
+.recycle {
+  position: absolute;
+  left: 2000px;
+  top: 500px;
+}
+
+.ewaste {
+  position: absolute;
+  left: 2000px;
+  top: 1000px;
+}
