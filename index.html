@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang = "en">
+  <head>
+    <title>My Drag-and-Drop Example</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="example-parent">
+        <div class="example-origin">
+          <div id="draggable-1" class="example-draggable"
+                draggable="true" ondragstart="onDragStart(event);">
+            
+            <img class = "resize" src = "bread.png" >
+            
+          </div>
+
+          <div id="draggable-1" class="example-draggable"
+                draggable="true" ondragstart="onDragStart(event);">
+            
+            <img class = "resize" src = "shampoo.png">
+            
+          </div>
+        </div>
+      
+        <div class="example-dropzone" ondragover="onDragOver(event);" ondrop="onDrop(event);">
+          
+          <img src = "garbageBin.png">
+        </div>
+        <div class="example-dropzone" ondragover="onDragOver(event);" ondrop="onDrop(event);">
+          
+          <img src = "compostBin.png">
+        </div>
+        <div class="example-dropzone" ondragover="onDragOver(event);" ondrop="onDrop(event);">
+          
+          <img src = "recycleBin.png">
+        </div>
+        <div class="example-dropzone" ondragover="onDragOver(event);" ondrop="onDrop(event);">
+          
+          <img src = "eWasteBin.png">
+        </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
