@@ -1,7 +1,7 @@
-body { 
+body {
     height: 100%;
     background-size: contain;
-    background-repeat: no-repeat; 
+    background-repeat: no-repeat;
     background-position: center center;
     background-image: url("Desktop - 2.png");
     overflow: scroll;
@@ -10,7 +10,7 @@ body {
 html {
     height: 100%;
     background-size: contain;
-    background-repeat: no-repeat; 
+    background-repeat: no-repeat;
     background-position: center center;
 }
 
