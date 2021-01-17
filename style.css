@@ -1,41 +1,56 @@
+
+.example-draggable {
+  background-color: #4AAE9B;
+  font-weight: normal;
+}
+
+.example-dropzone {
+  background-color: #6DB65B;
+  max-height: 800px;
+  max-width: 800px;
+  border: 3px dotted #ccc;
+  
+}
+
+.dragme {
+  position: absolute;
+  left: 0;
+  top: 0;
+  /* set these so Chrome doesn't return 'auto' from getComputedStyle */
+  width: 200px;
+  background: transparent;
+  border-radius: 4px;
+  padding: 8px;
+}
+
+.second {
+  left: 0px;
+  top: 120px;
+}
+
+.third {
+  left: 50px;
+  top: 120px;
+}
+
+.fourth{
+  left: 0px;
+  top: 200px;
+}
+
+.fifth {
+  left: 50px;
+  top: 0px;
+}
+
 body {
-    height: 100%;
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-image: url("Desktop - 2.png");
-    overflow: scroll;
+  min-height: 2000px;
+  border:2px solid #4AAE9B;
+  background-image: url("Desktop - 2.png");
+
+  background-repeat: no-repeat; 
+  background-position: center center;
 }
 
-html {
-    height: 100%;
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center center;
-}
-
-#button {
-    margin: auto 500px;
-    margin-top: 400px;
-    width: 300px;
-    height: auto;
-}
-
-#d3 {
-    position: absolute;
-    right: 65px;
-    bottom: 30px;
-    display: none;
-}
-
-#d4 {
-    position: absolute;
-    bottom: 30px;
-    display: none;
-}
-
-#d5 {
-    position: absolute;
-    right: 60px;
-    display: none;
+.bin {
 }

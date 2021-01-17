@@ -1,44 +1,32 @@
 <!DOCTYPE html>
 <html lang = "en">
   <head>
-    <title>My Drag-and-Drop Example</title>
+    <title>Sort the Waste!</title>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <div class="example-parent">
-        <div class="example-origin">
-          <div id="draggable-1" class="example-draggable"
-                draggable="true" ondragstart="onDragStart(event);">
-            
-            <img class = "resize" src = "bread.png" >
-            
-          </div>
 
-          <div id="draggable-1" class="example-draggable"
-                draggable="true" ondragstart="onDragStart(event);">
-            
-            <img class = "resize" src = "shampoo.png">
-            
-          </div>
+            <img class = "resize dragme" src = "bananaPeel.png" id="bananaPeel"
+            draggable="true" ondragstart="onDragStart(event);">
+            <img class = "resize dragme second" src = "shampoo.png" id="shampoo"
+            draggable="true" ondragstart="onDragStart(event);">
+            <img class = "resize dragme third" src = "brokenGlass.png" id="brokenGlass"
+            draggable="true" ondragstart="onDragStart(event);">
+            <img class = "resize dragme fourth" src = "computerParts.png" id="computerParts"
+            draggable="true" ondragstart="onDragStart(event);">
+            <img class = "resize dragme fifth" src = "newspaper.png" id="newspaper"
+            draggable="true" ondragstart="onDragStart(event);">
+
         </div>
       
-        <div class="example-dropzone" ondragover="onDragOver(event);" ondrop="onDrop(event);">
-          
-          <img src = "garbageBin.png">
+        <div>
+          <img src = "garbageBin.png" id="garbage" 
+          class="garbage" ondragover="onDragOver(event);" ondrop="onDrop(event);">
+          <img src = "compostBin.png"  id = "compost" class="compost" ondragover="onDragOver(event);" ondrop="onDrop(event);">
+          <img src = "recycleBin.png"  id="recycling" class="recycle" ondragover="onDragOver(event);" ondrop="onDrop(event);">
+          <img src = "eWasteBin.png" id="ewaste" class="ewaste" ondragover="onDragOver(event);" ondrop="onDrop(event);">
         </div>
-        <div class="example-dropzone" ondragover="onDragOver(event);" ondrop="onDrop(event);">
-          
-          <img src = "compostBin.png">
-        </div>
-        <div class="example-dropzone" ondragover="onDragOver(event);" ondrop="onDrop(event);">
-          
-          <img src = "recycleBin.png">
-        </div>
-        <div class="example-dropzone" ondragover="onDragOver(event);" ondrop="onDrop(event);">
-          
-          <img src = "eWasteBin.png">
-        </div>
-    </div>
+        <img src="transparent.png" id="transparent">
     <script src="script.js"></script>
   </body>
 </html>
