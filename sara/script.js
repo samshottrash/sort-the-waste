@@ -1,4 +1,3 @@
-
 var style;
 function onDragStart(event) {
   style = window.getComputedStyle(event.target, null);
@@ -29,6 +28,19 @@ function onDrop(event) {
 const garbage = ["brokenGlass", "plasticStraws"];
 const compost = ["bananaPeel", "eggshells"];
 const recycling = ["shampoo", "newspaper"];
+const bins = ["garbage", "recycling", "compost", "ewaste"];
+
+const items = [
+  { 
+    name: 'shampoo',
+    hint: 'shampoo_hint.png'
+  },
+  {
+    name: 'newspaper',
+    hint: 'news_hint.png'
+  }
+];
+
 
 let toSearch = [];
     const id = offset[2];
@@ -37,23 +49,27 @@ let toSearch = [];
     const draggableElement = document.getElementById(id);
     
     const dropzone = event.target;
+    let inBin = false;
 
     console.log(draggableElement);
       console.log(dropzone);
       if (dropzone.id === "compost") {
         toSearch = compost;
+        inBin = true;
         console.log("assigned c");
       }
 
       else if (dropzone.id === "garbage") {
         toSearch = garbage;
+        inBin = true;
         console.log("assigned g");
       }
       else if (dropzone.id === "recycling") {
         toSearch = recycling;
+        inBin = true;
       }
       console.log("TOSEARCH " + toSearch);
-
+      console.log("DROPPED: " + dropzone.id);
       if (draggableElement != null) {
         if (toSearch.includes(draggableElement.id)) {
           console.log("good job");
@@ -65,8 +81,19 @@ let toSearch = [];
            }
           console.log(dm.length);
         }
-        else {
+        
+        else if (inBin){
           console.log("sorry dude");
+          console.log(document.getElementById("transparent"));
+          console.log(items);
+          for(var item in items){
+            console.log(items[item]);
+            if(id === items[item].name)
+            {
+              console.log(item.hint)
+              document.getElementById("transparent").src= items[item].hint;
+            }
+          }
         }
       }
       
@@ -75,6 +102,11 @@ let toSearch = [];
     .clearData();
     
   }
+
+  document.body.addEventListener('mouseup', fn, true); 
+function fn() {
+  document.getElementById("transparent").src = "transparent.png"
+}
 
   var dm = document.getElementsByClassName('dragme');
 for (var i = 0; i < dm.length; i++) {
