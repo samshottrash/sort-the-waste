@@ -103,7 +103,7 @@ let toSearch = [];
     
   }
 
-  document.body.addEventListener('mouseup', fn, true); 
+  document.body.addEventListener('mousedown', fn, true); 
 function fn() {
   document.getElementById("transparent").src = "transparent.png"
 }
