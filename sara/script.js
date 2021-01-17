@@ -38,15 +38,15 @@ const items = [
   {
     name: 'newspaper',
     hint: 'images/news_hint.png'
-  }
+  },
   {
     name: 'bananaPeel',
     hint: 'images/bananaPeel_hint.png'
-  }
+  },
   {
     name: 'computerParts',
     hint: 'images/computerParts_hint.png'
-  }
+  },
   {
     name: 'brokenGlass',
     hint: 'images/brokenGlass_hint.png'
