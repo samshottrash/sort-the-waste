@@ -1,29 +1,4 @@
-.example-parent {
-  color: black;
-  display: flex;
-  font-family: sans-serif;
-  font-weight: bold;
-}
 
-.example-origin {
-  flex-basis: 100%;
-  flex-grow: 1;
-  padding: 10px;
-  max-width: 50%;
-}
-
-.example-draggable {
-  background-color: #4AAE9B;
-  font-weight: normal;
-}
-
-.example-dropzone {
-  background-color: #6DB65B;
-  max-height: 800px;
-  max-width: 800px;
-  border: 3px dotted #ccc;
-  
-}
 
 .dragme {
   position: absolute;
@@ -57,41 +32,45 @@
 }
 
 body {
-  min-height: 1000px;
-  min-width: 1000px;
+  height: 750px;
+  width: 1100px;
+  left: 300px;
   border:2px solid #4AAE9B;
+  position: relative;
+  
+  background-image: url("images/bg.png");
+  background-size: 65%;
+  background-repeat: no-repeat; 
+  background-position: center center;
 }
 
-.bin {
+.garbage{
+  position: relative;
+  left: 200px;
+  top: 400px;
+  height: 15%;
+  width: 15%;
+}
+.compost {
+  position: relative;
+  left: 200px;
+  top: 200px;
+  height: 15%;
+  width: 15%;
+
+}
+.recycling {
+  position: relative;
+  left: 400px;
+  top: 200px;
+  height: 20%;
+  width: 20%;
 }
 
 .compost {
-  position: absolute;
-  left: 1000px;
-  top: 500px;
-}
-
-.garbage {
-  position: absolute;
-  left: 1000px;
-  top: 1000px;
-}
-
-.recycle {
-  position: absolute;
-  left: 2000px;
-  top: 500px;
-}
-
-.ewaste {
-  position: absolute;
-  left: 2000px;
-  top: 1000px;
-}
-
-#transparent {
-  width: 700px; 
-  height: 220px;
-  background-repeat: no-repeat; 
-  background-image: url("sara/images/transparent.png"); 
+  position: relative;
+  left: 400px;
+  top: 400px;
+  height: 15%;
+  width: 15%;
 }
