@@ -1,5 +1,6 @@
 var style;
 var score = 0;
+var correct = true;
 
 document.getElementById('score').innerHTML = score;
 
@@ -96,8 +97,11 @@ let toSearch = [];
       if (draggableElement != null) {
         if (toSearch.includes(draggableElement.id)) {
           console.log("good job");
-          score++;
-          document.getElementById('score').innerHTML = score;
+          if (correct) {
+            score++;
+            document.getElementById('score').innerHTML = score;
+          }
+          correct = true;
           draggableElement.remove();
           console.log(dm);
           if (dm.length-1 == 0) { //garbage disposal array is empty so need to do pop up for next level
@@ -110,9 +114,7 @@ let toSearch = [];
         
         else if (inBin){
           console.log("sorry dude");
-          if(score >= 0) {
-            score--;
-          }
+          correct = false;
           console.log(document.getElementById("transparent"));
           console.log(items);
           for(var item in items){
