@@ -3,11 +3,6 @@ var style;
 function onDragStart(event) {
   style = window.getComputedStyle(event.target, null);
 	event.dataTransfer.setData("text/plain", (parseInt(style.getPropertyValue("left"), 10) - event.clientX) + ',' + (parseInt(style.getPropertyValue("top"), 10) - event.clientY) + ',' + event.target.id);
-
-  event
-    .currentTarget
-    .style
-    .backgroundColor = 'yellow';
 }
 
 function onDragOver(event) {
@@ -23,8 +18,10 @@ function onDrop(event) {
   console.log(offset);
   console.log(dm);
   const index = dm.findIndex(obj => obj.id === offset[2]);
-  dm[index].style.left = (event.clientX + parseInt(offset[0], 10)) + 'px';
-	dm[index].style.top = (event.clientY + parseInt(offset[1], 10)) + 'px';
+  if (dm[index] != undefined) {
+    dm[index].style.left = (event.clientX + parseInt(offset[0], 10)) + 'px';
+	  dm[index].style.top = (event.clientY + parseInt(offset[1], 10)) + 'px';
+  }
   
   //dm[parseInt(offset[2])].style.top = (event.clientY + parseInt(offset[1], 10)) + 'px';
 	event.preventDefault();
@@ -57,13 +54,20 @@ let toSearch = [];
       }
       console.log("TOSEARCH " + toSearch);
 
-      if (toSearch.includes(draggableElement.id)) {
-        console.log("good job");
-        dm.splice(index);
-        draggableElement.remove();
-      }
-      else {
-        console.log("sorry dude");
+      if (draggableElement != null) {
+        if (toSearch.includes(draggableElement.id)) {
+          console.log("good job");
+          draggableElement.remove();
+          console.log(dm);
+          if (dm.length-1 == 0) { //garbage disposal array is empty so need to do pop up for next level
+            console.log(document.getElementById("transparent"));
+            document.getElementById("transparent").src= "trees.jpg";
+           }
+          console.log(dm.length);
+        }
+        else {
+          console.log("sorry dude");
+        }
       }
       
       event

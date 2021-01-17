@@ -1,5 +1,4 @@
 .example-parent {
-  border: 2px solid #DFA612;
   color: black;
   display: flex;
   font-family: sans-serif;
@@ -20,7 +19,7 @@
 
 .example-dropzone {
   background-color: #6DB65B;
-  max-height: 800px
+  max-height: 800px;
   max-width: 800px;
   border: 3px dotted #ccc;
   
@@ -32,8 +31,7 @@
   top: 0;
   /* set these so Chrome doesn't return 'auto' from getComputedStyle */
   width: 200px;
-  background: rgba(255, 255, 255, 1);
-  border: 2px solid rgba(0, 0, 0, 1);
+  background: transparent;
   border-radius: 4px;
   padding: 8px;
 }
@@ -88,4 +86,11 @@ body {
   position: absolute;
   left: 2000px;
   top: 1000px;
+}
+
+#transparent {
+  width: 700px; 
+  height: 220px;
+  background-repeat: no-repeat; 
+  background-image: url("transparent.png"); 
 }
