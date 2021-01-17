@@ -1,4 +1,5 @@
 var style;
+var score = 0;
 function onDragStart(event) {
   style = window.getComputedStyle(event.target, null);
 	event.dataTransfer.setData("text/plain", (parseInt(style.getPropertyValue("left"), 10) - event.clientX) + ',' + (parseInt(style.getPropertyValue("top"), 10) - event.clientY) + ',' + event.target.id);
@@ -91,6 +92,8 @@ let toSearch = [];
       if (draggableElement != null) {
         if (toSearch.includes(draggableElement.id)) {
           console.log("good job");
+          score++;
+          document.getElementById('score').innerHTML = score;
           draggableElement.remove();
           console.log(dm);
           if (dm.length-1 == 0) { //garbage disposal array is empty so need to do pop up for next level
