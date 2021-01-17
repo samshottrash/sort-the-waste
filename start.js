@@ -17,11 +17,10 @@ function changeIMG() {
         if(d3.className != undefined) {
             clickNum++;
             document.body.style.backgroundImage = `url(${IMGS[clickNum]})`;
+            if(clickNum == 4) {
+                window.location.href = 'sara/index.html';
+            }
         }
-    } else {
-        d3.style.display="none";
-        d4.style.display="none";
-        d5.style.display="none";
     }
 }
 
@@ -30,12 +29,4 @@ function changeIMGBack() {
         clickNum = clickNum - 1;
         document.body.style.backgroundImage = `url(${IMGS[clickNum]})`;
     }
-}
-
-function skip() {
-    clickNum = 4;
-    document.body.style.backgroundImage = `url(${IMGS[clickNum]})`;
-    d3.style.display="none";
-    d4.style.display="none";
-    d5.style.display="none";
 }
