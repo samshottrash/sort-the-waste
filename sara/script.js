@@ -13,7 +13,7 @@ function onDragOver(event) {
 
 function onDrop(event) {
   var offset = event.dataTransfer.getData("text/plain").split(',');
-  const dm = Array.from(document.getElementsByClassName('dragme')); 
+  const dm = Array.from(document.getElementsByClassName('dragme'));
   console.log(offset);
   console.log(dm);
   const index = dm.findIndex(obj => obj.id === offset[2]);
@@ -21,23 +21,35 @@ function onDrop(event) {
     dm[index].style.left = (event.clientX + parseInt(offset[0], 10)) + 'px';
 	  dm[index].style.top = (event.clientY + parseInt(offset[1], 10)) + 'px';
   }
-  
+
   //dm[parseInt(offset[2])].style.top = (event.clientY + parseInt(offset[1], 10)) + 'px';
 	event.preventDefault();
-  
+
 const garbage = ["brokenGlass", "plasticStraws"];
 const compost = ["bananaPeel", "eggshells"];
 const recycling = ["shampoo", "newspaper"];
 const bins = ["garbage", "recycling", "compost", "ewaste"];
 
 const items = [
-  { 
+  {
     name: 'shampoo',
-    hint: 'shampoo_hint.png'
+    hint: 'images/shampoo_hint.png'
   },
   {
     name: 'newspaper',
-    hint: 'news_hint.png'
+    hint: 'images/news_hint.png'
+  }
+  {
+    name: 'bananaPeel',
+    hint: 'images/bananaPeel_hint.png'
+  }
+  {
+    name: 'computerParts',
+    hint: 'images/computerParts_hint.png'
+  }
+  {
+    name: 'brokenGlass',
+    hint: 'images/brokenGlass_hint.png'
   }
 ];
 
@@ -47,7 +59,7 @@ let toSearch = [];
 
     console.log(id);
     const draggableElement = document.getElementById(id);
-    
+
     const dropzone = event.target;
     let inBin = false;
 
@@ -81,7 +93,7 @@ let toSearch = [];
            }
           console.log(dm.length);
         }
-        
+
         else if (inBin){
           console.log("sorry dude");
           console.log(document.getElementById("transparent"));
@@ -97,14 +109,14 @@ let toSearch = [];
           getElementById.style.top= getBoundingClientRect().top + 500 + "px";
         }
       }
-      
+
       event
     .dataTransfer
     .clearData();
-    
+
   }
 
-  document.body.addEventListener('mousedown', fn, true); 
+  document.body.addEventListener('mousedown', fn, true);
 function fn() {
   document.getElementById("transparent").src = "transparent.png"
 }
