@@ -1,6 +1,9 @@
 var style;
 var score = 0;
+
 document.getElementById('score').innerHTML = score;
+
+
 function onDragStart(event) {
   style = window.getComputedStyle(event.target, null);
 	event.dataTransfer.setData("text/plain", (parseInt(style.getPropertyValue("left"), 10) - event.clientX) + ',' + (parseInt(style.getPropertyValue("top"), 10) - event.clientY) + ',' + event.target.id);
@@ -99,13 +102,17 @@ let toSearch = [];
           console.log(dm);
           if (dm.length-1 == 0) { //garbage disposal array is empty so need to do pop up for next level
             console.log(document.getElementById("transparent"));
-            document.getElementById("transparent").src= "trees.jpg";
+            document.getElementById("transparent").src= "images/level2.png";
+            document.getElementById("transparent").style.zIndex = 1;
            }
           console.log(dm.length);
         }
         
         else if (inBin){
           console.log("sorry dude");
+          if(score >= 0) {
+            score--;
+          }
           console.log(document.getElementById("transparent"));
           console.log(items);
           for(var item in items){
@@ -114,6 +121,7 @@ let toSearch = [];
             {
               console.log(item.hint)
               document.getElementById("transparent").src= items[item].hint;
+              document.getElementById("transparent").style.zIndex = 1;
             }
           }
           getElementById.style.top= getBoundingClientRect().top + 500 + "px";
@@ -128,7 +136,8 @@ let toSearch = [];
 
   document.body.addEventListener('mousedown', fn, true); 
 function fn() {
-  document.getElementById("transparent").src = "transparent.png"
+  document.getElementById("transparent").src = "images/transparent.png";
+  document.getElementById("transparent").style.zIndex = -1;
 }
 
   var dm = document.getElementsByClassName('dragme');

@@ -5,7 +5,14 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-
+      <div>
+        <img src = "images/garbageBin.png" id="garbage" 
+        class="garbage" ondragover="onDragOver(event);" ondrop="onDrop(event);">
+        <img src = "images/compostBin.png"  id = "compost" class="compost" ondragover="onDragOver(event);" ondrop="onDrop(event);">
+        <img src = "images/recycleBin.png"  id="recycling" class="recycle" ondragover="onDragOver(event);" ondrop="onDrop(event);">
+        <img src = "images/eWasteBin.png" id="ewaste" class="ewaste" ondragover="onDragOver(event);" ondrop="onDrop(event);">
+      </div>
+      <div>
             <img class = "resize dragme first" src = "images/bananaPeel.png" id="bananaPeel"
             draggable="true" ondragstart="onDragStart(event);">
             <img class = "resize dragme second" src = "images/shampoo.png" id="shampoo"
@@ -19,15 +26,11 @@
 
         </div>
       
-        <div>
-          <img src = "images/garbageBin.png" id="garbage" 
-          class="garbage" ondragover="onDragOver(event);" ondrop="onDrop(event);">
-          <img src = "images/compostBin.png"  id = "compost" class="compost" ondragover="onDragOver(event);" ondrop="onDrop(event);">
-          <img src = "images/recycleBin.png"  id="recycling" class="recycle" ondragover="onDragOver(event);" ondrop="onDrop(event);">
-          <img src = "images/eWasteBin.png" id="ewaste" class="ewaste" ondragover="onDragOver(event);" ondrop="onDrop(event);">
-        </div>
-        <img src="transparent.png" id="transparent">
+        
+        <img src="images/transparent.png" id="transparent" class = "transparent">
         <div id="score"></div>
-    <script src="script.js"></script>
+      
+      <script src="script.js"></script>
+    
   </body>
 </html>
