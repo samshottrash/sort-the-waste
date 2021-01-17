@@ -94,6 +94,7 @@ let toSearch = [];
               document.getElementById("transparent").src= items[item].hint;
             }
           }
+          getElementById.style.top= getBoundingClientRect().top + 500 + "px";
         }
       }
       
