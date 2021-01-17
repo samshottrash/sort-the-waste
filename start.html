@@ -7,14 +7,20 @@
   </head>
   <body>
     <section>
-        <p> 
-            <button type="button" id="butt1" onclick="changeIMG();"> 
-                Next
-            </button> 
-        </p> 
-        <p>
-          <input type="image" src="next.png" name="next" class="btTxt submit" id="next" />
-        </p>
+      <input type="image" src="start.png" name="start" class="btTxt_start" id="button" onclick="changeIMG();"/>
+
+      <div id="d3" class="btTxt_next">
+        <input type="image" src="next.png" name="next" id="next" onclick="changeIMG();"/>
+      </div>
+
+      <div id="d4" class="btTxt_back">
+        <input type="image" src="back.png" name="back" id="back" onclick="changeIMGBack();"/>
+      </div>
+
+      <div id="d5" class="btTxt_skip">
+        <input type="image" src="skip.png" name="skip" id="skip" onclick="skip();"/>
+      </div>
+      
     </section>
   </body>
 </html>

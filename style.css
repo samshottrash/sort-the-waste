@@ -14,6 +14,28 @@ html {
     background-position: center center;
 }
 
-/* #butt1 {
-    background-color: ;
-} */
+#button {
+    margin: auto 500px;
+    margin-top: 400px;
+    width: 300px;
+    height: auto;
+}
+
+#d3 {
+    position: absolute;
+    right: 65px;
+    bottom: 30px;
+    display: none;
+}
+
+#d4 {
+    position: absolute;
+    bottom: 30px;
+    display: none;
+}
+
+#d5 {
+    position: absolute;
+    right: 60px;
+    display: none;
+}
