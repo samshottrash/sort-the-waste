@@ -78,3 +78,13 @@ body {
   left: 540px;
   top: 370px;
 }
+
+@font-face {
+  font-family: myFont;
+  src: url("Winkle-Regular.ttf");
+}
+
+#score {
+  font-family: myFont;
+  font-size: xx-large;
+}
