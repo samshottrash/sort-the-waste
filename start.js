@@ -1,6 +1,6 @@
 var clickNum = -1;
 //2,5,3,4,6
-const IMGS = ['part2.png', 'part3.png', 'part4.png', 'part5.png', 'part6.png'];
+const IMGS = ['sara/images/part2.png', 'sara/images/part3.png', 'sara/images/part4.png', 'sara/images/part5.png', 'sara/images/part6.png'];
 
 function changeIMG() {
 

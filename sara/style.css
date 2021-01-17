@@ -57,7 +57,8 @@
 }
 
 body {
-  min-height: 2000px;
+  min-height: 1000px;
+  min-width: 1000px;
   border:2px solid #4AAE9B;
 }
 
@@ -92,5 +93,5 @@ body {
   width: 700px; 
   height: 220px;
   background-repeat: no-repeat; 
-  background-image: url("transparent.png"); 
+  background-image: url("sara/images/transparent.png"); 
 }
